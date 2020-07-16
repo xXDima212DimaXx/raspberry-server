@@ -28,8 +28,8 @@ from functools import partial
 from http import HTTPStatus
 from colorama import init, Fore, Back, Style
 import base64
-import tkinter as tk
-from tkinter import messagebox as mb
+#import tkinter as tk
+#from tkinter import messagebox as mb
 init()
 
 digit = random.randrange(100000000, 999999999)
@@ -44,75 +44,75 @@ os.system("clear") # For linux
 
 def handle_pa():
     print(Fore.YELLOW + "Run function for port A (POS)" + Style.RESET_ALL)
-    root = tk.Tk()
-    root.overrideredirect(1)
-    root.withdraw()
-    mb.showinfo("Raspberry Server", "Sending GPIO signal for pin \"?\" (Port A) ...")
-    root.destroy()
-    root.mainloop()
+    #root = tk.Tk()
+    #root.overrideredirect(1)
+    #root.withdraw()
+    #mb.showinfo("Raspberry Server", "Sending GPIO signal for pin \"?\" (Port A) ...")
+    #root.destroy()
+    #root.mainloop()
     
 def handle_na():
     print(Fore.YELLOW + "Run function for port A (NEG)" + Style.RESET_ALL)
-    root = tk.Tk()
+    r'''root = tk.Tk()
     root.overrideredirect(1)
     root.withdraw()
     mb.showinfo("Raspberry Server", "Sending GPIO signal for pin \"?\" (Port A) ...")
     root.destroy()
-    root.mainloop()
+    root.mainloop()'''
     
 def handle_pb():
     print(Fore.YELLOW + "Run function for port B (POS)" + Style.RESET_ALL)
-    root = tk.Tk()
+    r'''root = tk.Tk()
     root.overrideredirect(1)
     root.withdraw()
     mb.showinfo("Raspberry Server", "Sending GPIO signal for pin \"?\" (Port B) ...")
     root.destroy()
-    root.mainloop()
+    root.mainloop()'''
     
 def handle_nb():
     print(Fore.YELLOW + "Run function for port B (NEG)" + Style.RESET_ALL)
-    root = tk.Tk()
+    r'''root = tk.Tk()
     root.overrideredirect(1)
     root.withdraw()
     mb.showinfo("Raspberry Server", "Sending GPIO signal for pin \"?\" (Port B) ...")
     root.destroy()
-    root.mainloop()
+    root.mainloop()'''
     
 def handle_pc():
     print(Fore.YELLOW + "Run function for port C (POS)" + Style.RESET_ALL)
-    root = tk.Tk()
+    r'''root = tk.Tk()
     root.overrideredirect(1)
     root.withdraw()
     mb.showinfo("Raspberry Server", "Sending GPIO signal for pin \"?\" (Port C) ...")
     root.destroy()
-    root.mainloop()
+    root.mainloop()'''
     
 def handle_nc():
     print(Fore.YELLOW + "Run function for port C (NEG)" + Style.RESET_ALL)
-    root = tk.Tk()
+    r'''root = tk.Tk()
     root.overrideredirect(1)
     root.withdraw()
     mb.showinfo("Raspberry Server", "Sending GPIO signal for pin \"?\" (Port C) ...")
     root.destroy()
-    root.mainloop()
+    root.mainloop()'''
     
 def handle_pd():
     print(Fore.YELLOW + "Run function for port D (POS)" + Style.RESET_ALL)
-    root = tk.Tk()
+    r'''root = tk.Tk()
     root.overrideredirect(1)
     root.withdraw()
     mb.showinfo("Raspberry Server", "Sending GPIO signal for pin \"?\" (Port D) ...")
     root.destroy()
-    root.mainloop()
+    root.mainloop()'''
     
 def handle_nd():
     print(Fore.YELLOW + "Run function for port D (NEG)" + Style.RESET_ALL)
-    root = tk.Tk()
+    r'''root = tk.Tk()
     root.overrideredirect(1)
     root.withdraw()
     mb.showinfo("Raspberry Server", "Sending GPIO signal for pin \"?\" (Port D) ...")
     root.destroy()
-    root.mainloop()
+    root.mainloop()'''
 
 def execute_py(data):
     print(Fore.MAGENTA + "Decoding \"" + data + "\" to python file ..." + Style.RESET_ALL)
@@ -130,12 +130,13 @@ def execute_py(data):
 
 def connectivitycheck():
     print(Fore.GREEN + "Connectivitycheck successfull" + Style.RESET_ALL)
-    root = tk.Tk()
+    print(f"{Fore.GREEN}Connectivity check passed. Security token is{Style.RESET_ALL} {Fore.RED}{security_token}{Style.RESET_ALL}")
+    r'''root = tk.Tk()
     root.overrideredirect(1)
     root.withdraw()
     mb.showinfo("Raspberry Server", f"Connectivity check passed. Security token is {security_token}")
     root.destroy()
-    root.mainloop()
+    root.mainloop()'''
 
 # Default error message template
 DEFAULT_ERROR_MESSAGE = r"""
